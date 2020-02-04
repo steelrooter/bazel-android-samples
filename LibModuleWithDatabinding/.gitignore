@@ -1,1 +1,8 @@
+# IDE
 .aswb
+
+# Bazel
+bazel-LibModuleWithDatabinding
+bazel-bin
+bazel-out
+bazel-testlogs
