@@ -1,0 +1,25 @@
+directories:
+  # Add the directories you want added as source here
+  # By default, we've added your entire workspace ('.')
+  .
+
+# Automatically includes all relevant targets under the 'directories' above
+derive_targets_from_directories: true
+
+workspace_type: android
+
+java_language_level: 8
+
+additional_languages:
+  android
+  java
+  kotlin
+
+build_flags:
+  --android_databinding_use_v3_4_args
+  --experimental_android_databinding_v2
+  --override_repository=android_tools=/tmp/android_tools
+
+android_sdk_platform: android-29
+
+android_min_sdk: 16

@@ -1,0 +1,17 @@
+android_binary(
+    name = "app",
+    crunch_png = False,
+    enable_data_binding = False,
+    manifest = "src/main/AndroidManifest.xml",
+    manifest_values = {
+        "versionCode": "1",
+        "versionName": "1.0",
+        "minSdkVersion": "16",
+        "targetSdkVersion": "29",
+    },
+    resource_files = glob(["src/main/res/**"]),
+    deps = [
+        "//hello-world",
+    ],
+    custom_package = "com.xachin.playground",
+)

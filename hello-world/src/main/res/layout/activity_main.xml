@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.xachin.playground.clock.ClockViewModel"
+            />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context="com.xachin.playground.hello_world.MainActivity"
+        >
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            />
+
+        <TextView
+            android:id="@+id/time_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{vm.time}"
+            tools:text="10:10 AM"
+            />
+
+        <Button
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please change the format!"
+            android:onClick="@{() -> vm.changeTimeFormat()}"
+            />
+
+    </LinearLayout>
+
+</layout>
