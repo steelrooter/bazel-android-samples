@@ -1,2 +1,5 @@
-include ':app', ':hello-world'
+include ':app'
+include ':hello-world'
+include ':text-binders'
+
 rootProject.name='Bazel Android Playground'

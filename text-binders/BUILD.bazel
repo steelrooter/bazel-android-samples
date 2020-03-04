@@ -1,0 +1,13 @@
+android_library(
+    name = "text-binders",
+    srcs = ["src/main/java/com/xachin/playground/text_binders/TextBinders.java"],
+    custom_package = "com.xachin.playground.text_binders",
+    enable_data_binding = True,
+    manifest = "src/main/AndroidManifest.xml",
+    resource_files = glob(["src/main/res/**"]),
+    visibility = ["//hello-world:__pkg__"],
+    deps = [
+        "@maven//:com_android_databinding_baseLibrary",
+        "@maven//:com_android_databinding_library",
+    ],
+)

@@ -1,0 +1,8 @@
+load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_android_library")
+
+kt_android_library(
+    name = "playground-app",
+    srcs = ["PlaygroundApp.kt"],
+    enable_data_binding = False,
+    visibility = ["//app:__pkg__"],
+)

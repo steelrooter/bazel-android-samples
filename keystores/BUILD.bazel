@@ -1,0 +1,5 @@
+filegroup(
+    name = "debug-keystore",
+    srcs = ["debug.keystore"],
+    visibility = ["//app:__pkg__"],
+)

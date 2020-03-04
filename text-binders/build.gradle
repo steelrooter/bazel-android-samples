@@ -27,7 +27,6 @@ android {
 }
 
 dependencies {
-    implementation project(':text-binders')
 
     testImplementation 'junit:junit:4.12'
 }

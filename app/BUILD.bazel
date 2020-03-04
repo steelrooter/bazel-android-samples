@@ -1,7 +1,9 @@
 android_binary(
     name = "app",
     crunch_png = False,
-    enable_data_binding = False,
+    custom_package = "com.xachin.playground",
+    debug_key = "//keystores:debug-keystore",
+    enable_data_binding = True,
     manifest = "src/main/AndroidManifest.xml",
     manifest_values = {
         "versionCode": "1",
@@ -11,7 +13,9 @@ android_binary(
     },
     resource_files = glob(["src/main/res/**"]),
     deps = [
+        "//app/src/main/java/com/xachin/playground:playground-app",
         "//hello-world",
+        "@maven//:com_android_databinding_baseLibrary",
+        "@maven//:com_android_databinding_library",
     ],
-    custom_package = "com.xachin.playground",
 )

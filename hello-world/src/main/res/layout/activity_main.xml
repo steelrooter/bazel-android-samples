@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
 
@@ -16,8 +17,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         tools:context="com.xachin.playground.hello_world.MainActivity"
         >
 
@@ -26,6 +27,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:globes="@{vm.formatNumber}"
+            tools:text="GlobeGlobeGlobe"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:clockFaces="@{vm.formatNumber}"
+            tools:text="ClockClockClock"
             />
 
         <TextView
@@ -40,9 +55,14 @@
             android:id="@+id/change"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Please change the format!"
+            android:layout_marginTop="50dp"
             android:onClick="@{() -> vm.changeTimeFormat()}"
+            android:text="Please change the format!"
             />
+        <!--
+        FIXME: Doesn't work with Bazel yet
+        android:onClick="@{() -> vm.changeTimeFormat()}"
+        -->
 
     </LinearLayout>
 
