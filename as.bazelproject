@@ -16,6 +16,7 @@ additional_languages:
   kotlin
 
 build_flags:
+  --strategy=Desugar=sandboxed
   --android_databinding_use_v3_4_args
   --experimental_android_databinding_v2
   --override_repository=android_tools=/tmp/android_tools

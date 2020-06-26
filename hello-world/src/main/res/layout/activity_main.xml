@@ -59,10 +59,6 @@
             android:onClick="@{() -> vm.changeTimeFormat()}"
             android:text="Please change the format!"
             />
-        <!--
-        FIXME: Doesn't work with Bazel yet
-        android:onClick="@{() -> vm.changeTimeFormat()}"
-        -->
 
     </LinearLayout>
 
